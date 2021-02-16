@@ -54,8 +54,7 @@ services:
       - "4171:4171"
   nsqInitializer:
     image: curlimages/curl
-    networks:
-      - host
+    network_mode: host
     deploy:
       restart_policy:
         condition: on-failure

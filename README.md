@@ -99,7 +99,7 @@ The enrichment process will create an:
 - Searching online for answers is acceptable and encouraged.
 - **Share your code in a git repo (Preferable) or a zip file returned to the email address that sent you these requirements.** 
 - You are free to use any messaging systems you like or are familiar with. We use these two, but they are not the only ones!
-(We provide a [docker compose file](docker-compose.yml) so you can have these queues ready to go, ***NSQ has also some messages ready to ingest***)
+(We provide a [docker compose file](docker-compose.yml) so you can have these queues ready to go, ***NSQ has also some messages ready to ingest. UI - http://localhost:4171***)
 - We are testing for general GO/Java knowledge and some critical thought processes around design patterns and exception handling.
 - Spend 3 hours coding. If you don't finish - that isn't a deal breaker. If you must spend more than 3 hours - 
 just let us know how far you got within the allotted time. 

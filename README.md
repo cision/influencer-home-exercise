@@ -21,7 +21,7 @@ Create an enrichment service which reads messages from NSQ topics (twitter, face
 The enrichment process will create an:
  - index kafka message when we don't have the influencer in our DB (in this case our [JSON file](data/influencers))
  - update kafka message when we have the profile in our DB but the updated_at is before to the ingested one.
- - update kafka message when the ingested message match a name from other social network of an influencer that already exists in the DB (to add the missing social network to the profile).
+ - update kafka message when the ingested message match another social profile name of an influencer document that already exists in the DB (to add the missing social network to the profile).
  - delete kafka message when the ingested message has a deleted_at and it is the only social profile we have in our DB (otherwise just create an update with empty profile [see example](https://github.com/beholderCision/influencer-home-exercise#example---update-kafka-message-deleting-social-profile-nsq-message-with-deleted_at)
     - **Discard any new message creating that social profile**
 

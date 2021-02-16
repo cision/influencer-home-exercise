@@ -91,6 +91,8 @@ The enrichment process will create an:
 # Prerequisites
  - Have a working Java/GO IDE on your machine
  - Docker desktop (_to run our [docker compose file](docker-compose.yml)_)
+ - Kafka tool (to check kafka messages) https://www.kafkatool.com/download.html
+ ![KafkaTool1](docs/kafka-tool1.png) ![KafkaTool2](docs/kafka-tool2.png)
 
 
 # This & That

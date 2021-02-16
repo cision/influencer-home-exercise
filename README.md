@@ -39,7 +39,7 @@ The enrichment process will create an:
 |deleted_at|date|mutable|
 
 ### Facebook message model
-|Key|Type|
+|Key|Type|Description|
 |---|---|---|
 |id|int|inmutable|
 |username|string|mutable|

@@ -13,7 +13,7 @@ data model and we want to store the data using a common model which unifies the 
 following the common model it will be added to a Kafka queue in a JSON format. This message will have a different action (index or update) 
 depending of the data we already have in ElasticSearch (***in this case we just need to read an [attached file](data/influencers) with some Elasticsearch documents***)
 
-#Exercise
+# Exercise
 Create an enrichment service which reads messages from NSQ topics (twitter, facebook) and generates messages in a Kafka topic (influencers) 
 **based on the data we already have stored**.
 ![Architecture](docs/architecture.png)
@@ -83,11 +83,13 @@ The enrichment process will create an:
 ### Example - Delete Kafka message
 ``{ "delete" : {"_index" : "influencers", "_retry_on_conflict" : 3, "_id" : "0"}}`+ "\n"``
 
-#Prerequisites
+
+# Prerequisites
  - Have a working Java/GO IDE on your machine
  - Docker desktop (_to run our [docker compose file](docker-compose.yml)_)
 
-#This & That
+
+# This & That
 - Searching online for answers is acceptable and encouraged.
 - **Share your code in a git repo (Preferable) or a zip file returned to the email address that sent you these requirements.** 
 - You are free to use any messaging systems you like or are familiar with. We use these two, but they are not the only ones!

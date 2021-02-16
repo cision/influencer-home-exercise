@@ -28,26 +28,26 @@ The enrichment process will create an:
 **The enrichment process will discard any message without the required attributes (id, name, updated_at)**
 
 ### Twitter message model
-|Key|Type|
-|---|---|
-|id|int|
-|screen_name|string|
-|biography|string|
-|profile_image|string|
-|location|string|
-|updated_at|date|
-|deleted_at|date|
+|Key|Type|Description|
+|---|---|---|
+|id|int|inmutable|
+|screen_name|string|mutable|
+|biography|string|mutable|
+|profile_image|string|mutable|
+|location|string|mutable|
+|updated_at|date|mutable|
+|deleted_at|date|mutable|
 
 ### Facebook message model
 |Key|Type|
-|---|---|
-|id|int|
-|username|string|
-|about|string|
-|image|string|
-|location|string|
-|updated_at|date|
-|deleted_at|date|
+|---|---|---|
+|id|int|inmutable|
+|username|string|mutable|
+|about|string|mutable|
+|image|string|mutable|
+|location|string|mutable|
+|updated_at|date|mutable|
+|deleted_at|date|mutable|
 
 ### Influencer model
 -|-|-|type|required|
@@ -56,12 +56,16 @@ The enrichment process will create an:
 | |twitter|
 | | |id|int|yes
 | | |name|string|yes
+| | |image|string|no
 | | |bio|string|no
+| | |location|string|no
 | | |updated_at|date|yes
 | |facebook|
 | | |id|int|yes
 | | |name|string|yes
+| | |image|string|no
 | | |bio|string|no
+| | |location|string|no
 | | |updated_at|date|yes
 |updated_at|(added in enrichment)| |date|yes
 

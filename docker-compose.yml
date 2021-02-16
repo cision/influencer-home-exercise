@@ -52,3 +52,29 @@ services:
       - nsqlookupd
     ports:
       - "4171:4171"
+  nsqInitializer:
+    image: curlimages/curl
+    networks:
+      - host
+    deploy:
+      restart_policy:
+        condition: on-failure
+    depends_on:
+      - nsqlookupd
+    command: [ "sh","-c","sleep 15 &&
+    curl -d '{ \"id\": 11, \"screen_name\": \"test1\", \"location\": \"US\", \"deleted_at\" : \"2021-01-30T21:13:42Z\" }\n
+    { \"id\": 81, \"screen_name\": \"test81\", \"biography\": \"test81 bio\", \"profile_image\": \"www.twitter.com/img/test81\", \"updated_at\" : \"2021-02-05T21:13:42Z\" }\n
+    { \"id\": 21, \"screen_name\": \"test2\", \"biography\": \"this is test 2\", \"location\": \"ES\", \"updated_at\" : \"2021-01-15T21:13:42Z\" }\n
+    { \"id\": 31, \"screen_name\": \"test3\", \"biography\": \"test3 bio\", \"deleted_at\" : \"2021-01-31T21:13:42Z\" }\n
+    { \"id\": 61, \"screen_name\": \"test6_change\", \"biography\": \"this is test 6 update\", \"location\": \"IT\", \"updated_at\" : \"2021-01-15T21:13:42Z\" }\n
+    { \"id\": 41, \"screen_name\": \"test4\", \"biography\": \"this is test 4 update\", \"location\": \"MX\", \"updated_at\" : \"2021-01-01T21:13:42Z\" }\n
+    { \"id\": 11, \"screen_name\": \"test1\", \"biography\": \"this is test 1\", \"location\": \"US\", \"updated_at\" : \"2021-01-29T21:13:42Z\" }'
+    http://localhost:4151/mpub?topic=twitter &&
+    curl -d '{ \"id\": 52, \"deleted_at\" : \"2021-01-02T21:13:42Z\" }\n
+    { \"id\": 62, \"username\": \"test62_deleted\", \"about\": \"deleted by facebook\", \"deleted_at\" : \"2021-01-29T21:13:42Z\" }\n
+    { \"id\": 72, \"username\": \"test72\", \"about\": \"new facebook user!\", \"image\" : \"www.facebook.com/img/test72.png\", \"location\" : \"Madrid, Spain\", \"updated_at\" : \"2021-01-20T21:13:42Z\" }\n
+    { \"id\": 22, \"username\": \"test2_updated\", \"about\": \"updated about test22\", \"image\" : \"www.facebook.com/img/test22.png\", \"updated_at\" : \"2021-02-12T21:13:42Z\" }\n
+    { \"id\": 52, \"username\": \"test52\", \"location\" : \"Chicago, US\", \"updated_at\" : \"2021-01-12T21:13:42Z\" }\n
+    { \"id\": 42, \"username\": \"test4\", \"about\": \"this is test 4\", \"updated_at\" : \"2021-01-01T21:13:42Z\" }\n
+    { \"id\": 32, \"username\": \"test32\", \"about\": \"update test32\", \"image\" : \"www.facebook.com/img/test72.png\", \"updated_at\" : \"2021-01-20T21:13:42Z\" }'
+    http://localhost:4151/mpub?topic=facebook" ]

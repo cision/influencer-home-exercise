@@ -63,11 +63,11 @@
           "profiles" : {
                 "twitter": {
                     "id": 41,
-                    "screen_name": "test1",
-                    "updated_at" : "2021-01-25T21:13:42Z"
+                    "screen_name": "test4",
+                    "updated_at" : "2021-02-15T21:13:42Z"
                 }
             },
-            "updated_at" : "2021-01-25T21:13:42Z"
+            "updated_at" : "2021-02-15T21:13:42Z"
         }
     },
     {
@@ -78,7 +78,30 @@
           "profiles" : {
                 "facebook": {
                     "id": 52,
-                    "screen_name": "test2",
+                    "screen_name": "test5",
+                    "updated_at" : "2021-01-25T21:13:42Z"
+                }
+            },
+            "updated_at" : "2021-01-25T21:13:42Z"
+        }
+    },
+    {
+        "_index" : "influencers",
+        "_type" : "_doc",
+        "_id" : "6",
+        "_source" : {
+          "profiles" :
+            {
+                "twitter": {
+                    "id": 61,
+                    "screen_name": "test6",
+                    "bio": "this is test 6",
+                    "updated_at" : "2020-01-25T21:13:42Z"
+                }
+            },
+            {   "facebook": {
+                    "id": 62,
+                    "screen_name": "test6",
                     "updated_at" : "2021-01-25T21:13:42Z"
                 }
             },

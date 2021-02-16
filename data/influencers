@@ -1,0 +1,88 @@
+[
+    {
+        "_index" : "influencers",
+        "_type" : "_doc",
+        "_id" : "1",
+        "_source" : {
+          "profiles" : {
+                "twitter": {
+                    "id": 11,
+                    "screen_name": "test1",
+                    "bio": "this is test 1",
+                    "updated_at" : "2021-01-25T21:13:42Z",
+                }
+            },
+            "updated_at" : "2021-01-25T21:13:42Z"
+        }
+    },
+    {
+        "_index" : "influencers",
+        "_type" : "_doc",
+        "_id" : "2",
+        "_source" : {
+          "profiles" : {
+                "facebook": {
+                    "id": 22,
+                    "screen_name": "test2",
+                    "bio": "this is test 2",
+                    "updated_at" : "2021-01-25T21:13:42Z"
+                }
+            },
+            "updated_at" : "2021-01-25T21:13:42Z"
+        }
+    },
+    {
+        "_index" : "influencers",
+        "_type" : "_doc",
+        "_id" : "3",
+        "_source" : {
+          "profiles" :
+            {
+                "twitter": {
+                    "id": 31,
+                    "screen_name": "test3",
+                    "bio": "this is test 3",
+                    "updated_at" : "2020-08-25T21:13:42Z"
+                }
+            },
+            {   "facebook": {
+                    "id": 32,
+                    "screen_name": "test3",
+                    "bio": "this is test 3",
+                    "updated_at" : "2021-01-25T21:13:42Z"
+                }
+            },
+            "updated_at" : "2021-01-25T21:13:42Z"
+        }
+    },
+    {
+        "_index" : "influencers",
+        "_type" : "_doc",
+        "_id" : "4",
+        "_source" : {
+          "profiles" : {
+                "twitter": {
+                    "id": 41,
+                    "screen_name": "test1",
+                    "updated_at" : "2021-01-25T21:13:42Z"
+                }
+            },
+            "updated_at" : "2021-01-25T21:13:42Z"
+        }
+    },
+    {
+        "_index" : "influencers",
+        "_type" : "_doc",
+        "_id" : "5",
+        "_source" : {
+          "profiles" : {
+                "facebook": {
+                    "id": 52,
+                    "screen_name": "test2",
+                    "updated_at" : "2021-01-25T21:13:42Z"
+                }
+            },
+            "updated_at" : "2021-01-25T21:13:42Z"
+        }
+    }
+]

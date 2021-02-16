@@ -50,20 +50,20 @@ The enrichment process will create an:
 |deleted_at|date|
 
 ### Influencer model
--|-|-|required|
-|---|---|---|---|
+-|-|-|type|required|
+|---|---|---|---|---|
 |profiles||
 | |twitter|
-| | |id|yes
-| | |name|yes
-| | |bio|no
-| | |updated_at|yes
+| | |id|int|yes
+| | |name|string|yes
+| | |bio|string|no
+| | |updated_at|date|yes
 | |facebook|
-| | |id|yes
-| | |name|yes
-| | |bio|no
-| | |updated_at|yes
-|updated_at|(added in enrichment)| |yes
+| | |id|int|yes
+| | |name|string|yes
+| | |bio|string|no
+| | |updated_at|date|yes
+|updated_at|(added in enrichment)| |date|yes
 
 ### Example - Index Kafka message
 ``{ "index" : {"_index" : "influencers", "_retry_on_conflict" : 3}}`+"\n"``

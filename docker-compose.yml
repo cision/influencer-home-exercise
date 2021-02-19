@@ -1,20 +1,17 @@
 version: '3'
 networks:
-  host:
+  default:
     driver: bridge
+    name: "influencer"
 services:
   zookeeper:
     image: 'bitnami/zookeeper:3.6.2'
-    networks:
-      - host
     environment:
       - ALLOW_ANONYMOUS_LOGIN=yes
     ports:
       - '2181:2181'
   kafka:
     image: 'bitnami/kafka:2.6.0'
-    networks:
-      - host
     environment:
       - KAFKA_BROKER_ID=1
       - KAFKA_LISTENERS=PLAINTEXT://:9092
@@ -27,26 +24,25 @@ services:
       - zookeeper
   nsqlookupd:
     image: nsqio/nsq
-    networks:
-      - host
     command: /nsqlookupd
     ports:
       - "4160:4160"
       - "4161:4161"
   nsqd:
     image: nsqio/nsq
-    networks:
-      - host
-    command: /nsqd --lookupd-tcp-address=nsqlookupd:4160
+    command: /nsqd --broadcast-address=localhost --lookupd-tcp-address=nsqlookupd:4160
     depends_on:
       - nsqlookupd
     ports:
       - "4150:4150"
       - "4151:4151"
+    networks:
+      default:
+        aliases:
+          - nsqd
+          - localhost
   nsqadmin:
     image: nsqio/nsq
-    networks:
-      - host
     command: /nsqadmin --lookupd-http-address=nsqlookupd:4161
     depends_on:
       - nsqlookupd

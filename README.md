@@ -55,14 +55,14 @@ The enrichment process will create an:
 |profiles||
 | |twitter|
 | | |id|int|yes
-| | |name|string|yes
+| | |screen_name|string|yes
 | | |image|string|no
 | | |bio|string|no
 | | |location|string|no
 | | |updated_at|date|yes
 | |facebook|
 | | |id|int|yes
-| | |name|string|yes
+| | |screen_name|string|yes
 | | |image|string|no
 | | |bio|string|no
 | | |location|string|no

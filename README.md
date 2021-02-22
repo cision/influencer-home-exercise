@@ -71,22 +71,22 @@ The enrichment process will create an:
 
 ## EXAMPLES KAFKA MESSAGES (Reference: https://www.elastic.co/guide/en/elasticsearch/reference/6.8/docs-bulk.html)
 ### Index
-``{ "index" : {"_index" : "influencers", "_retry_on_conflict" : 3}} +"\n"``
+``{ "index" : {"_index" : "influencers", "_retry_on_conflict" : 3} } +"\n"``
 
-``{"profiles" : {"facebook": {"id": 20,"name": "infl0","bio": "this is 0","updated_at" : "2021-01-25T21:13:42Z"} },"updated_at" : "2021-02-15T21:13:42Z"}`+"\n"``
+``{"profiles" : {"facebook": {"id": 20,"name": "infl0","bio": "this is 0","updated_at" : "2021-01-25T21:13:42Z"} },"updated_at" : "2021-02-15T21:13:42Z"} + "\n"``
 
 ### Update
-``{ "update" : {"_index" : "influencers", "_retry_on_conflict" : 3, "_id" : "0"}} + "\n"``
+``{ "update" : {"_index" : "influencers", "_retry_on_conflict" : 3, "_id" : "0"} } + "\n"``
 
-``{ "doc": `{"profiles" : {"twitter": {"id": 00,"name": "infl0","bio": "this is 0","updated_at" : "2021-01-25T21:13:42Z"}},"updated_at" : "2021-01-25T21:13:42Z"}`, "doc_as_upsert" : true }` + "\n" ``
+``{ "doc": {"profiles" : {"twitter": {"id": 00,"name": "infl0","bio": "this is 0","updated_at" : "2021-01-25T21:13:42Z"} },"updated_at" : "2021-01-25T21:13:42Z"}`, "doc_as_upsert" : true } + "\n" ``
 
 ### Update message deleting social profile (NSQ message with deleted_at)
-``{ "update" : {"_index" : "influencers", "_retry_on_conflict" : 3, "_id" : "12"}}` + "\n"``
+``{ "update" : {"_index" : "influencers", "_retry_on_conflict" : 3, "_id" : "12"} } + "\n"``
 
-``{ "doc": `{"profiles" : {"facebook": {}},"updated_at" : "2021-01-25T21:13:42Z"}`, "doc_as_upsert" : true }` + "\n" ``
+``{ "doc": {"profiles" : {"facebook": {}},"updated_at" : "2021-01-25T21:13:42Z"}`, "doc_as_upsert" : true } + "\n" ``
 
 ### Delete Kafka message
-``{ "delete" : {"_index" : "influencers", "_retry_on_conflict" : 3, "_id" : "0"}}`+ "\n"``
+``{ "delete" : {"_index" : "influencers", "_retry_on_conflict" : 3, "_id" : "0"} } + "\n"``
 
 
 # Prerequisites

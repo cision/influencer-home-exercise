@@ -69,22 +69,23 @@ The enrichment process will create an:
 | | |updated_at|date|yes
 |updated_at|(added in enrichment)| |date|yes
 
-### Example - Index Kafka message
-``{ "index" : {"_index" : "influencers", "_retry_on_conflict" : 3}}`+"\n"``
+## EXAMPLES KAFKA MESSAGES (Reference: https://www.elastic.co/guide/en/elasticsearch/reference/6.8/docs-bulk.html)
+### Index
+``{ "index" : {"_index" : "influencers", "_retry_on_conflict" : 3}} +"\n"``
 
 ``{"profiles" : {"facebook": {"id": 20,"name": "infl0","bio": "this is 0","updated_at" : "2021-01-25T21:13:42Z"} },"updated_at" : "2021-02-15T21:13:42Z"}`+"\n"``
 
-### Example - Update Kafka message
-``{ "update" : {"_index" : "influencers", "_retry_on_conflict" : 3, "_id" : "0"}}` + "\n"``
+### Update
+``{ "update" : {"_index" : "influencers", "_retry_on_conflict" : 3, "_id" : "0"}} + "\n"``
 
 ``{ "doc": `{"profiles" : {"twitter": {"id": 00,"name": "infl0","bio": "this is 0","updated_at" : "2021-01-25T21:13:42Z"}},"updated_at" : "2021-01-25T21:13:42Z"}`, "doc_as_upsert" : true }` + "\n" ``
 
-### Example - Update Kafka message deleting social profile (NSQ message with deleted_at)
+### Update message deleting social profile (NSQ message with deleted_at)
 ``{ "update" : {"_index" : "influencers", "_retry_on_conflict" : 3, "_id" : "12"}}` + "\n"``
 
 ``{ "doc": `{"profiles" : {"facebook": {}},"updated_at" : "2021-01-25T21:13:42Z"}`, "doc_as_upsert" : true }` + "\n" ``
 
-### Example - Delete Kafka message
+### Delete Kafka message
 ``{ "delete" : {"_index" : "influencers", "_retry_on_conflict" : 3, "_id" : "0"}}`+ "\n"``
 
 

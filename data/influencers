@@ -4,12 +4,12 @@
         "_type" : "_doc",
         "_id" : "1",
         "_source" : {
-          "profiles" : {
+            "profiles" : {
                 "twitter": {
                     "id": 11,
                     "screen_name": "test1",
                     "bio": "this is test 1",
-                    "updated_at" : "2021-01-25T21:13:42Z",
+                    "updated_at" : "2021-01-25T21:13:42Z"
                 }
             },
             "updated_at" : "2021-01-25T21:13:42Z"
@@ -20,7 +20,7 @@
         "_type" : "_doc",
         "_id" : "2",
         "_source" : {
-          "profiles" : {
+            "profiles" : {
                 "facebook": {
                     "id": 22,
                     "screen_name": "test2",
@@ -36,23 +36,22 @@
         "_type" : "_doc",
         "_id" : "3",
         "_source" : {
-          "profiles" :
+            "profiles" :
             {
                 "twitter": {
                     "id": 31,
                     "screen_name": "test3",
                     "bio": "this is test 3",
                     "updated_at" : "2020-08-25T21:13:42Z"
-                }
-            },
-            {   "facebook": {
+                },
+                "facebook": {
                     "id": 32,
                     "screen_name": "test3",
                     "bio": "this is test 3",
                     "updated_at" : "2021-01-25T21:13:42Z"
                 }
             },
-            "updated_at" : "2021-01-25T21:13:42Z"
+            "updated_at": "2021-01-25T21:13:42Z"
         }
     },
     {
@@ -60,14 +59,14 @@
         "_type" : "_doc",
         "_id" : "4",
         "_source" : {
-          "profiles" : {
+            "profiles": {
                 "twitter": {
                     "id": 41,
                     "screen_name": "test4",
                     "updated_at" : "2021-02-15T21:13:42Z"
                 }
             },
-            "updated_at" : "2021-02-15T21:13:42Z"
+            "updated_at": "2021-02-15T21:13:42Z"
         }
     },
     {
@@ -75,7 +74,7 @@
         "_type" : "_doc",
         "_id" : "5",
         "_source" : {
-          "profiles" : {
+            "profiles" : {
                 "facebook": {
                     "id": 52,
                     "screen_name": "test5",
@@ -90,22 +89,21 @@
         "_type" : "_doc",
         "_id" : "6",
         "_source" : {
-          "profiles" :
+            "profiles" :
             {
                 "twitter": {
                     "id": 61,
                     "screen_name": "test6",
                     "bio": "this is test 6",
                     "updated_at" : "2020-01-25T21:13:42Z"
-                }
-            },
-            {   "facebook": {
+                },
+                "facebook": {
                     "id": 62,
                     "screen_name": "test6",
                     "updated_at" : "2021-01-25T21:13:42Z"
                 }
             },
-            "updated_at" : "2021-01-25T21:13:42Z"
+            "updated_at": "2021-01-25T21:13:42Z"
         }
     }
 ]
